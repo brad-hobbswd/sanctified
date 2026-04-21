@@ -7,162 +7,194 @@
 <title>Sanctified | Bradley Hobbs</title>
 
 <style>
+
+/* RESET */
 body {
     margin: 0;
     font-family: Georgia, serif;
-    background: #ffffff;
-    color: #222;
-    line-height: 1.8;
+    background: #0b1a2f;
+    color: #ffffff;
 }
 
+/* NAVBAR */
 nav {
-    position: sticky;
+    position: fixed;
     top: 0;
-    background: #ffffff;
-    border-bottom: 1px solid #eee;
+    width: 100%;
+    background: rgba(11, 26, 47, 0.95);
     padding: 15px;
     text-align: center;
     z-index: 1000;
+    border-bottom: 1px solid rgba(244,201,93,0.2);
 }
 
 nav a {
-    margin: 0 8px;
+    color: #f4c95d;
+    margin: 0 12px;
     text-decoration: none;
-    color: #7a4f5c;
     font-weight: bold;
 }
 
-.container {
-    max-width: 800px;
-    margin: auto;
-    padding: 40px 20px;
-}
-
-h1 {
+/* HERO BANNER */
+.hero {
+    height: 70vh;
+    background: url('banner.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    margin-bottom: 10px;
-}
-
-.author {
-    text-align: center;
-    margin-bottom: 40px;
-    color: #666;
-}
-
-.chapter {
+    padding: 20px;
     margin-top: 60px;
 }
 
-.chapter h2 {
-    color: #7a4f5c;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 10px;
+.hero-overlay {
+    background: rgba(0,0,0,0.45);
+    padding: 30px;
+    border-radius: 10px;
 }
 
-p {
-    margin-bottom: 18px;
+.hero h1 {
+    font-size: 52px;
+    color: #f4c95d;
+    text-shadow: 0 0 20px rgba(244,201,93,0.7);
+    margin-bottom: 10px;
 }
+
+.hero p {
+    font-size: 20px;
+    color: #fff8e6;
+}
+
+/* CONTENT SECTION */
+.container {
+    background: #f9f3e8;
+    color: #142c4c;
+    margin-top: -50px;
+    padding: 50px 20px;
+    border-radius: 20px 20px 0 0;
+}
+
+/* TITLE */
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #142c4c;
+}
+
+/* START BUTTON */
+.start-btn {
+    display: block;
+    margin: 0 auto 40px;
+    padding: 14px 28px;
+    background: linear-gradient(to right, #f4c95d, #e6b84a);
+    color: #142c4c;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    width: fit-content;
+}
+
+/* CHAPTER LIST */
+.chapter-list {
+    list-style: none;
+    padding: 0;
+    max-width: 900px;
+    margin: auto;
+}
+
+.chapter-list li {
+    margin: 16px 0;
+}
+
+/* CARD STYLE */
+.chapter-list a {
+    display: block;
+    padding: 18px;
+    background: #fff8e6;
+    border-left: 6px solid #f4c95d;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #142c4c;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+/* HOVER */
+.chapter-list a:hover {
+    transform: translateY(-4px);
+    background: #ffffff;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* FOOTER */
+.footer {
+    background: #0b1a2f;
+    color: #f4c95d;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 14px;
+}
+
 </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <nav>
-<a href="#c1">1</a>
-<a href="#c2">2</a>
-<a href="#c3">3</a>
-<a href="#c4">4</a>
-<a href="#c5">5</a>
-<a href="#c6">6</a>
-<a href="#c7">7</a>
-<a href="#c8">8</a>
-<a href="#c9">9</a>
-<a href="#c10">10</a>
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Chapters</a>
+<a href="#">Contact</a>
 </nav>
 
+<!-- HERO -->
+<div class="hero">
+    <div class="hero-overlay">
+        <h1>Sanctified</h1>
+        <p>The House Where Jesus Rewrites Stories</p>
+        <p>Bradley Hobbs</p>
+    </div>
+</div>
+
+<!-- CONTENT -->
 <div class="container">
 
-<h1>Sanctified: The House Where Jesus Rewrites Stories</h1>
-<div class="author"><strong>Bradley Hobbs</strong></div>
+<div class="section-title">Table of Chapters</div>
 
+<a href="sanctified-ch1.html" class="start-btn">Start Reading</a>
 
-<div class="chapter" id="c1">
-<h2>Chapter One — Sanctified Begins Where Jesus Stands</h2>
+<ul class="chapter-list">
 
-<p>Sanctified does not begin where people expect it to begin. It does not begin with perfection, rules, or moral achievement. It begins where Jesus stands, waiting, knowing every wound, seeing every scar, and inviting every heart. Bethesda Tabernacle was born from this truth.</p>
+<li><a href="sanctified-ch1.html">Chapter 1 — Sanctified Begins Where Jesus Stands</a></li>
 
-<p>Pastor Jason Barrett, Founder and Lead Pastor, had carried a burden for years. He watched people leave churches broken, discouraged, or ashamed. He saw believers fluent in Scripture yet unfamiliar with rest. He saw people worshiping privately but hiding publicly. He watched children enter Sunday school full of curiosity but leave carrying labels that silenced their joy. Pastor Jason knew that churches could appear full yet leave souls empty.</p>
+<li><a href="sanctified-ch2.html">Chapter 2 — Sanctified Is Christ Formed Within</a></li>
 
-<p>One night, in extended prayer and fasting, Pastor Jason was taken into a vision that would define the house forever. He saw a pool, still and crowded. It resembled the pool of Bethesda described in John 5. People had been waiting there for years, some for decades. Some limped. Some stood silently, afraid to approach. Jesus stood beside the water, not judging, not counting, simply watching. Angels descended, not to separate, but to stir the water. Where it had been stagnant, it now moved. A song of heaven seemed to echo around him: “Do not be afraid. The One who made you has not left you. He sees you. He knows you. Step forward.”</p>
+<li><a href="sanctified-ch3.html">Chapter 3 — Sanctified Means Safe Enough to Heal</a></li>
 
-<p>Pastor Jason felt the weight of the vision settle over him. The Lord spoke directly: “This house will not measure success by numbers. It will not measure success by appearances. It will measure success by the restoration of My children. Bring them to Me, and My Spirit will do the rest.”</p>
+<li><a href="sanctified-ch4.html">Chapter 4 — Sanctified Beyond the Power of Labels</a></li>
+
+<li><a href="sanctified-ch5.html">Chapter 5 — Sanctified Through Transformation and the Spirit</a></li>
+
+<li><a href="sanctified-ch6.html">Chapter 6 — Sanctified Through History and Understanding</a></li>
+
+<li><a href="sanctified-ch7.html">Chapter 7 — Sanctified Love Restores the Heart</a></li>
+
+<li><a href="sanctified-ch8.html">Chapter 8 — Sanctified Healing Across Generations</a></li>
+
+<li><a href="sanctified-ch9.html">Chapter 9 — Sanctified to Step Into Calling</a></li>
+
+<li><a href="sanctified-ch10.html">Chapter 10 — Sanctified: The House Where Stories Are Completed</a></li>
+
+</ul>
 
 </div>
 
-
-<div class="chapter" id="c2">
-<h2>Chapter Two — Sanctified Is Christ Formed Within</h2>
-
-<p>Bethesda Tabernacle discovered early that a room full of people does not guarantee hearts full of God. Many churches focus on numbers, performances, or outward appearances. Bethesda focused on presence—the presence of Jesus dwelling inside every life. Pastor Jason Barrett often preached from Colossians 1:27: “Christ in you, the hope of glory.”</p>
-</div>
-
-
-<div class="chapter" id="c3">
-<h2>Chapter Three — Sanctified Means Safe Enough to Heal</h2>
-
-<p>For many, church had not been a place of healing. It had been a place of judgment, fear, and performance. Bethesda Tabernacle intentionally became a sanctuary, a place safe enough for people to bring every wound, doubt, and fear to the feet of Jesus.</p>
-</div>
-
-
-<div class="chapter" id="c4">
-<h2>Chapter Four — Sanctified Beyond the Power of Labels</h2>
-
-<p>Bethesda Tabernacle quickly realized that labels carry immense weight. Many had arrived burdened by words from parents, society, schools, or churches.</p>
-</div>
-
-
-<div class="chapter" id="c5">
-<h2>Chapter Five — Sanctified Through Transformation and the Spirit</h2>
-
-<p>Sanctification is not only about identity; it is about transformation—allowing Jesus to fully rewrite a life from the inside out.</p>
-</div>
-
-
-<div class="chapter" id="c6">
-<h2>Chapter Six — Sanctified Through History and Understanding</h2>
-
-<p>Sanctification is not just personal—it is also historical.</p>
-</div>
-
-
-<div class="chapter" id="c7">
-<h2>Chapter Seven — Sanctified Love Restores the Heart</h2>
-
-<p>Bethesda Tabernacle understood that fear and shame often hindered the expression of love.</p>
-</div>
-
-
-<div class="chapter" id="c8">
-<h2>Chapter Eight — Sanctified Healing Across Generations</h2>
-
-<p>Bethesda Tabernacle understood early that healing is not only personal—it is generational.</p>
-</div>
-
-
-<div class="chapter" id="c9">
-<h2>Chapter Nine — Sanctified to Step Into Calling</h2>
-
-<p>At Bethesda Tabernacle, sanctification was always tied to purpose.</p>
-</div>
-
-
-<div class="chapter" id="c10">
-<h2>Chapter Ten — Sanctified: The House Where Stories Are Completed</h2>
-
-<p>Bethesda Tabernacle had grown from a sanctuary for the broken to a living testimony of God’s restorative power.</p>
-</div>
-
-
+<!-- FOOTER -->
+<div class="footer">
+© 2026 Bradley Hobbs — All Rights Reserved
 </div>
 
 </body>
