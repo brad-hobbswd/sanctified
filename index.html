@@ -8,7 +8,7 @@
 
 <style>
 
-/* BODY RESET */
+/* BODY */
 body {
     margin: 0;
     font-family: Georgia, serif;
@@ -17,76 +17,101 @@ body {
     overflow-x: hidden;
 }
 
-/* NAVBAR */
+/* NAVBAR (BLENDS INTO BANNER) */
 nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(11, 26, 47, 0.95);
     padding: 15px;
     text-align: center;
     z-index: 1000;
-    border-bottom: 1px solid rgba(244,201,93,0.2);
+    background: linear-gradient(to bottom, rgba(11,26,47,0.85), rgba(11,26,47,0));
+    backdrop-filter: blur(6px);
 }
 
 nav a {
     color: #f4c95d;
-    margin: 0 12px;
+    margin: 0 14px;
     text-decoration: none;
     font-weight: bold;
+    letter-spacing: 0.5px;
 }
 
-/* HERO BANNER (FIXED BEHAVIOR) */
+/* HERO */
 .hero {
-    height: 60vh;
-    width: 100%;
-    background-image: url('A30C4C23-71C7-4721-878B-6533CA027327.png');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
     margin-top: 60px;
+    width: 100%;
+    position: relative;
 }
 
-/* MOBILE OPTIMIZATION */
-@media (max-width: 768px) {
-    .hero {
-        height: 40vh;
-        background-position: center top;
-    }
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-/* CONTENT SECTION */
+/* GOLD GLOW DIVIDER */
+.hero::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(11,26,47,0.9));
+}
+
+/* CONTENT */
 .container {
     background: #f9f3e8;
     color: #142c4c;
-    padding: 50px 20px;
-    border-radius: 20px 20px 0 0;
+    padding: 60px 20px;
+    border-radius: 30px 30px 0 0;
+    margin-top: -40px;
+    box-shadow: 0 -10px 40px rgba(0,0,0,0.4);
 }
 
 /* TITLE */
 .title {
     text-align: center;
     margin-bottom: 10px;
-    font-size: 36px;
+    font-size: 40px;
+    letter-spacing: 1px;
 }
 
 .subtitle {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     color: #7a4f5c;
+    font-size: 18px;
+}
+
+/* GOLD DIVIDER */
+.divider {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(to right, #f4c95d, #e6b84a);
+    margin: 20px auto 40px;
+    border-radius: 3px;
 }
 
 /* START BUTTON */
 .start-btn {
     display: block;
-    margin: 0 auto 40px;
-    padding: 14px 28px;
+    margin: 0 auto 50px;
+    padding: 16px 32px;
     background: linear-gradient(to right, #f4c95d, #e6b84a);
     color: #142c4c;
     text-decoration: none;
-    border-radius: 25px;
+    border-radius: 30px;
     font-weight: bold;
     width: fit-content;
+    box-shadow: 0 6px 20px rgba(244,201,93,0.4);
+    transition: 0.25s;
+}
+
+.start-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(244,201,93,0.6);
 }
 
 /* CHAPTER LIST */
@@ -98,27 +123,28 @@ nav a {
 }
 
 .chapter-list li {
-    margin: 16px 0;
+    margin: 18px 0;
 }
 
-/* CHAPTER CARDS */
+/* CARDS */
 .chapter-list a {
     display: block;
-    padding: 18px;
+    padding: 20px;
     background: #fff8e6;
     border-left: 6px solid #f4c95d;
-    border-radius: 12px;
+    border-radius: 14px;
     text-decoration: none;
     color: #142c4c;
-    font-size: 18px;
+    font-size: 19px;
     font-weight: 600;
     transition: 0.25s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
 .chapter-list a:hover {
-    transform: translateY(-4px);
+    transform: translateY(-5px);
     background: #ffffff;
-    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    box-shadow: 0 14px 35px rgba(0,0,0,0.15);
 }
 
 /* FOOTER */
@@ -126,8 +152,9 @@ nav a {
     background: #0b1a2f;
     color: #f4c95d;
     text-align: center;
-    padding: 30px 20px;
+    padding: 40px 20px;
     font-size: 14px;
+    border-top: 1px solid rgba(244,201,93,0.2);
 }
 
 </style>
@@ -143,14 +170,18 @@ nav a {
 <a href="#">Contact</a>
 </nav>
 
-<!-- BANNER -->
-<div class="hero"></div>
+<!-- HERO -->
+<div class="hero">
+    <img src="A30C4C23-71C7-4721-878B-6533CA027327.png" alt="Sanctified Banner">
+</div>
 
-<!-- MAIN CONTENT -->
+<!-- CONTENT -->
 <div class="container">
 
 <div class="title">Sanctified</div>
 <div class="subtitle">The House Where Jesus Rewrites Stories<br>Bradley Hobbs</div>
+
+<div class="divider"></div>
 
 <a href="sanctified-ch1.html" class="start-btn">Start Reading</a>
 
