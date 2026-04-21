@@ -8,12 +8,13 @@
 
 <style>
 
-/* BODY */
+/* BODY RESET */
 body {
     margin: 0;
     font-family: Georgia, serif;
     background: #0b1a2f;
     color: #ffffff;
+    overflow-x: hidden;
 }
 
 /* NAVBAR */
@@ -35,11 +36,23 @@ nav a {
     font-weight: bold;
 }
 
-/* BANNER IMAGE ONLY */
+/* HERO BANNER (FIXED BEHAVIOR) */
 .hero {
-    height: 70vh;
-    background: url('A30C4C23-71C7-4721-878B-6533CA027327.png') center/cover no-repeat;
+    height: 60vh;
+    width: 100%;
+    background-image: url('banner.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
     margin-top: 60px;
+}
+
+/* MOBILE OPTIMIZATION */
+@media (max-width: 768px) {
+    .hero {
+        height: 40vh;
+        background-position: center top;
+    }
 }
 
 /* CONTENT SECTION */
@@ -50,12 +63,11 @@ nav a {
     border-radius: 20px 20px 0 0;
 }
 
-/* TITLE BELOW BANNER */
+/* TITLE */
 .title {
     text-align: center;
     margin-bottom: 10px;
     font-size: 36px;
-    color: #142c4c;
 }
 
 .subtitle {
@@ -89,6 +101,7 @@ nav a {
     margin: 16px 0;
 }
 
+/* CHAPTER CARDS */
 .chapter-list a {
     display: block;
     padding: 18px;
@@ -130,10 +143,10 @@ nav a {
 <a href="#">Contact</a>
 </nav>
 
-<!-- CLEAN BANNER -->
+<!-- BANNER -->
 <div class="hero"></div>
 
-<!-- CONTENT -->
+<!-- MAIN CONTENT -->
 <div class="container">
 
 <div class="title">Sanctified</div>
